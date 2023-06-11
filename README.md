@@ -1,9 +1,9 @@
 # Owner 
- Ibrahim Ismael 
- ismael@student.agh.edu.pl
- AGH University of Science and Technology
- Faculty of Mechanical Engineering and Robotics
- Mechatronic Engineering: Mechatronic Design 
+ Ibrahim Ismael <br />
+ ismael@student.agh.edu.pl <br />
+ AGH University of Science and Technology <br />
+ Faculty of Mechanical Engineering and Robotics <br />
+ Mechatronic Engineering: Mechatronic Design <br />
 
 # Cepstral-Analysis
 Build GUI app for Cepstral analysis.
