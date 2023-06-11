@@ -20,7 +20,7 @@ Cepstral Analysis general algorithm steps:
 6. Inverse Fourier Transform
 
 App at start:
-![Lunch](\img\Lunch.png)
+![Lunch](/img/Lunch.png)
 
 The app can load two types of file wav and mat file extensions. 
 
@@ -28,4 +28,4 @@ Then the user will choose the values to their signal and finnaly press update bu
 
 From Plot drop down we have four options.
 
-![test](\img\test.png)
+![test](/img/test.png)
