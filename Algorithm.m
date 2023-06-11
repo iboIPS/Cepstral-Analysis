@@ -1,11 +1,11 @@
 close all; clear; clc;
 % load the file
-[x, fs] = audioread('Random_Signal.wav');
+[x, fs] = audioread('.\Signal\WAV\Harmonic_Signal.wav');
 
 % Step 1: Signal Pre-Processing
 % Apply a digital filter to remove noise
 b = fir1(50, 0.5);
-y = filter(b, 1, x);
+y = filter(b, 1, x(:,1));
 
 % Apply a moving average filter to smooth the signal
 z = smoothdata(y, 'movmean', 100);
@@ -18,7 +18,7 @@ z_norm = normalize(z, 'range', [-1 1]);
 frame_length = round(fs * 0.025); % 25 milliseconds
 frame_shift = round(fs * 0.01); % 10 milliseconds
 
-% Divide the signal into frames
+%% Divide the signal into frames
 frames = buffer(z_norm, frame_length, frame_length - frame_shift, 'nodelay');
 
 % Step 3: Windowing
@@ -43,7 +43,7 @@ frames_log_fft = log10(frames_fft);
 cepstrum = real(ifft(frames_log_fft));
 
 % Choose a frame index to plot (e.g., frame 10)
-frame_idx = 100;
+frame_idx = 10;
 
 % Extract the desired frame from the matrix of log magnitude spectra
 Extracted_frame_log_fft = frames_fft(:, frame_idx);
